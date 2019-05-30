@@ -1,0 +1,69 @@
+/* this stylesheet applies to only the login.handlebars page.
+ any repetition of classname will not affect content outside
+  the login.handlebars and applies to all other pages */
+  .container-login{
+    
+    padding-top: 10px !important;
+    padding-bottom: 20px !important;
+    width: 500px !important;
+    margin: auto !important;
+    margin-top: 50px !important;
+}
+main{
+    margin-bottom: 50px;
+}
+.input-field label{
+   color: #ee6e73 !important;
+}
+.blue{
+    /* margin-left: 60px; */
+    width: 500px !important;
+    /* background-color: green !important; */
+}
+.login{
+    color: #ee6e73;
+}
+form{
+    width: 450px !important;
+    padding-left: 70px !important;
+}
+.btn{
+    background-color: #ee6e73 !important;
+    margin-top: 20px !important;
+}
+span{
+    padding-top: 27px !important;
+}
+.submit{
+    margin-left: 8px !important;
+}
+.bl{
+    color: #322332;
+}
+input:focus-within{
+    border-bottom-color: #ee6e73 !important;
+}
+.input-field input:focus + label {
+    color: white !important;
+    font-size: 18px !important;
+    transition: 1s !important;
+  }
+
+
+
+  .user-message {
+    margin: auto;
+    width: 90%;
+    border: 1px solid #4771fa;
+    padding: 0.5rem;
+    border-radius: 3px;
+    background: #b9c9ff;
+    text-align: center;
+  }
+  
+  .user-message--error {
+    border-color: red;
+    background: rgb(255, 176, 176);
+    color: red;
+  }
+

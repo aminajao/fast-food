@@ -1,0 +1,71 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/shop.css">
+<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <%- include('../includes/_msg.ejs') %>
+
+    <main>
+
+        <main id="main-content">
+
+            <div class="container">
+                <div class="row">
+                    <form class="center">
+                        <div class="input-field center">
+                            <input id="search" placeholder="Search Meals and make order" type="search" class="center marg"
+                                required>
+                            <label class="label-icon" for="search"><i class="material-icons marg">search</i></label>
+                            <i class="material-icons marg">close</i>
+                        </div>
+                    </form>
+
+
+                </div>
+
+            </div>
+
+            <% if (prods.length > 0) { %>
+            <div id="meals">
+                <% for (let product of prods) { %>
+
+                <div class="row">
+                    <div class="card col s12 m6 l4">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator " src="../images/ella-olsson-1184056-unsplash.jpg">
+                        </div>
+                        <div class="card-content">
+                            <p class="card-title activator grey-text text-darken-4">
+                                <%= product.title %>
+                            </p>
+                            <p>Amount: <span># <%= product.price %></span></p>
+
+                            <div class="beside">
+                                <div>
+                                        <a href="/admin/edit-product/<%= product._id %>?edit=true" class="btn" type="submit">Edit</a>
+                                </div>
+                                <div>
+                                    <form action="/admin/delete-product" class="admin-add-product" method="post">
+                                        <input type="hidden" value="<%= product._id %>" name="productId">
+                                        <button class="btn" type="submit">Delete</button>
+                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                           
+                        </div>
+
+                    </div>
+
+                    <% } %>
+                </div>
+                <% } else { %>
+                <h1>No Products Found!</h1>
+                <% } %>
+            </div>
+        </main>
+        <%- include('../includes/end.ejs') %>

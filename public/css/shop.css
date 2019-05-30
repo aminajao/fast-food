@@ -1,0 +1,85 @@
+
+.input-field{
+    margin-top: 10px !important;
+    color: 2px white solid !important;
+    margin: auto !important;
+
+}
+/* #search, .input-field{
+    
+} */
+form.center{
+    margin-left: 84px !important;
+    margin-right: 90px !important;
+}
+#search{
+    border-bottom-color: #ee6e73 !important;
+    border: 2px #ee6e73 solid !important;
+    border-radius: 4px !important;
+   
+}
+.marg{
+
+    margin-top: 12px !important;
+}
+.btn{
+    margin-top: 10px !important;
+    background-color: #ee6e73 !important;
+
+}
+/* .activator{ 
+    height: 70% !important;
+    
+} */
+
+h1{
+    color: red !important;
+}
+.card{
+    min-width: 330px !important;
+    max-width: 330px !important;
+    min-height: 360px !important;
+    max-height: 400px !important;
+    margin-right: 50px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-bottom: 20px !important;
+}
+.card-image{
+    height: 80% !important;
+    min-height: 245px !important;
+}
+#meals{
+    margin-left: 100px !important;
+    margin-right: 20px !important;
+}
+.beside{
+    width: 210px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 25px !important;
+}
+.admin-add-product{
+    margin-left: 25px !important;
+}
+button.add-to-cart{
+    width: 119px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.cart-form{
+    width: 130px !important;
+    margin-left: 0px !important;
+}
+.user-details{
+    margin-left: 110px !important;
+    margin-top: -45px !important;
+}
+.card-content{
+    padding-top: 10px !important;
+}
+@media only screen and (max-width: 700px){
+    #meals{
+        margin-left: 100px !important;
+    }
+}

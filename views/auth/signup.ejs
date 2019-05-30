@@ -1,0 +1,65 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="../css/signup.css">
+<link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    
+
+<main>
+        <div class="container-signup mobile-sign-up card center">
+                <% if (errorMessage) { %>
+                    <div class="user-message user-message--error">
+                        <h6><%= errorMessage %></h6>
+                    </div>
+                <% } %>
+
+                
+
+                <div class="row">
+                    <form class="col s8 m12 mobile-sign-up l12 " action="/signup" method="POST" novalidate>
+                        <div class="row">
+                            <div>
+                                <h4 class="signup">Sign up</h4>
+                            </div>
+                            <!-- <div class="input-field col s12 m12 l12">
+                                <input id="full_name" type="text"  required="required" value="<%= oldInput.fullName %>" name="fullName" class="validate">
+                                <label for="fullname">Full Name</label>
+                            </div> -->
+            
+                            <div class="input-field col s12 m12 l12">
+                                <input id="email" type="email" required="required" value="<%= oldInput.email %>" name="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+            
+            
+                            <div class="input-field col s12 m12 l12">
+                                <input id="password" type="password" name="password" value="<%= oldInput.password %>" required="required" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="input-field col s12 m12 l12">
+                                <input id="confirm_password" type="password" name="confirmPassword" value="<%= oldInput.confirmPassword %>" required="required" class="validate">
+                                <label for="confirmPassword">Confirm Password</label>
+                            </div>
+                            <div class="col">
+                                <div class="row submit">
+                                        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                    <button class="btn col signupbtn" type="submit">Sign Up</button>
+                                    <span class="col bl ">Already have an account ? <a href="/login" class="signup">Login </a></span>
+                                </div>
+            
+                               
+                            </div>
+                        </div>
+            
+                    </form>
+                </div>
+            
+            </div>
+        
+
+</main>
+<%- include('../includes/footer.ejs') %>
+        <%- include('../includes/end.ejs') %>

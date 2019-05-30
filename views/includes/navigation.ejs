@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="/css/navigation.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <nav class="nav-height">
+                <div class="nav-wrapper nav-height">
+                    <a href="/index" class="brand-logo ">FAST FOOD<i class="large-icon material-icons right">directions_car</i></a>
+
+                    <a href="#" data-target="mobile-demo" class="menu-mobile sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right other-font valign-wrapper nav-height valign-wrapper hide-on-med-and-down">
+                        <% if (!isAuthenticated) { %>
+                        <li><a href="/index" class="bkground">Home</a></li> |
+
+                        <% } %>
+
+                        <li><a href="/shop" class="bkground">Browse Menu</a></li> |
+                        <% if (isAuthenticated) { %>
+                        <li><a href="/cart" class="bkground">Cart</a></li> |
+                        <li><a href="/orders" class="bkground">Orders</a></li>
+
+
+
+
+                        <% } %>
+                        <% if (!isAuthenticated) { %>
+
+                        <li><a href="/login" class="bkground">Login</a></li> |
+                        <li><a href="/signup" class="bkground">Sign Up</a></li>
+                        <% } else { %>
+                        <form action="/logout" class="logout-form" method="post">
+                            <input type="hidden" class="logout" name="_csrf" value="<%= csrfToken %>">
+                            <button type="submit" class="logout btn">Logout</button>
+                        </form>
+
+                        <% } %>
+                    </ul>
+
+                </div>
+
+            </nav>
+            <ul class="sidenav" id="mobile-demo">
+                <div id="user-details">
+                    <h3 class="circle">FastFood</h3>
+                    <h6 class="user-name">
+                         
+                    </h6>
+                </div>
+
+
+
+                <% if (isAuthenticated) { %>
+                <li><a href="/shop" class="bkground">Browse Menu</a></li>
+                <li><a href="/cart" class="bkground">Cart</a></li>
+                <li><a href="/orders" class="bkground">Orders</a></li>
+
+
+                <% } else { %>
+                <li><a href="/index" class="bkground">Home</a></li>
+                <% } %>
+
+
+                <% if (!isAuthenticated) { %>
+
+                <li><a href="/login" class="bkground">Login</a></li>
+                <li><a href="/signup" class="bkground">Sign Up</a></li>
+                <% } else { %>
+
+
+
+
+                <form action="/logout" class="logout-form mobile-logout" method="post">
+                    <input type="hidden" class="logout" name="_csrf" value="<%= csrfToken %>">
+                    <button type="submit" class="logout btn">Logout</button>
+                </form>
+
+                <% } %>
+
+
+
+
+
+
+
+
+
+
+
+            </ul>
+        </div>
+
+
+
+    </header>

@@ -1,0 +1,40 @@
+<%- include('includes/head.ejs') %>
+
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <main class="cent">
+        <h1 class=""> Error <span class="error-404">404</span></h1>
+        <h1>Page Not Found!</h1>
+        <a href="/shop" class="btn color">Go back</a>
+    </main>
+
+
+    <style>
+        .logout-form {
+            margin-top: 25px;
+        }
+        main{
+            min-height: 400px;
+        }
+
+        .cent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .color {
+            background-color: #ee6e73;
+            width: 120px;
+        }
+
+        .error-404 {
+            color: #ee6e73;
+        }
+    </style>
+    <%- include('./includes/footer.ejs') %>
+    <%- include('includes/end.ejs') %>

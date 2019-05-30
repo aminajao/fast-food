@@ -1,0 +1,73 @@
+@media only screen and (max-width: 600px) {
+    .inter{
+        margin-left: 20px;
+    }
+} 
+@media only screen and (max-width: 520px){
+    .mobile-container{
+        width: 400px !important;
+    }
+    .mobile-login{
+        padding-right: 60px !important;
+    }
+  
+}
+@media only screen and (max-width: 650px){
+    .mobile-sign-up{
+        
+    }
+    .mobile-sign-up{
+       width: 400px;
+    }
+}
+@media only screen and (max-width: 890px){
+    #meals{
+        margin-left: 200px !important;
+        align-content: center;
+
+    }
+}
+@media only screen and (max-width: 700px){
+    #meals{
+        margin-left: 100px !important;
+    }
+}
+@media only screen and (max-width: 690px){
+    .cart-det{
+        padding-left: 60px !important;
+    }
+}
+@media only screen and (max-width: 590px){
+    .cart-det{
+        padding-left: 80px !important;
+    }
+}
+@media only screen and (max-width: 550px){
+    img.activator.card{
+        width: 250px !important;
+    }
+}
+.btn:hover{
+    background-color: brown !important;
+}
+@media only screen and (max-width: 1280px){
+    .tab-cent{
+        margin-left: 100px !important;
+    }
+}
+@media only screen and (max-width: 1175px){
+    .tab-cent{
+        margin-left: 50px !important;
+    }
+}
+@media only screen and (max-width: 1000px){
+    /* .meals{
+        margin-left: 50px !important;
+    } */
+    .mob-cent{
+        display: flex;
+        flex-direction: column;
+        margin: auto !important;
+    }
+}
+

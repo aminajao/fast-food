@@ -1,0 +1,49 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <ul class="cart__item-list">
+            <% products.forEach(p => { %>
+            <li class="cart__item row">
+                <div class="col mobile-img s6 m6 l6">
+                    <img class="activator card  " src="<%= p.productId.imageUrl %>">
+                </div>
+                <div class="cart-det col s6 m6 l6">
+                    <h1 class="cart-name">Name:
+                        <%= p.productId.title %>
+                    </h1>
+                    <h1 class="cart-quantity">Quantity:
+                        <%= p.quantity %>
+                    </h1>
+                    <h2 class="cart-price">
+                        Price: $
+                        <%= p.productId.price %>
+                    </h2>
+                </div>
+
+
+            </li>
+            <% }) %>
+        </ul>
+        <div class="centered">
+            <h3>Total:<%= totalSum %></h3>
+        </div>
+        <div>
+
+            <form action="/create-order" method="POST">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <input type="hidden">
+                <button type="submit" class="btn centered">Pay Now</button>
+            </form>
+
+        </div>
+
+    </main>
+
+    <%- include('../includes/footer.ejs') %>
+    <%- include('../includes/end.ejs') %>

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+/* main content background image */
+#main-content{
+  /* background-image: url('../images/ella-olsson-1184056-unsplash.jpg') !important; */
+  background-image: url('https://res.cloudinary.com/dg7n6i9e1/image/upload/v1559076243/ella-olsson-1184056-unsplash_piiljq.jpg') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  height: 85vh !important;
+  -webkit-background-size: cover;
+  padding-top: -20px !important;
+  /* padding-left: 80px; */
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.logout{
+  background-color: antiquewhite !important;
+  color: tomato !important;
+  font-weight:  bolder !important;
+  cursor: pointer;
+}
+form.logout-form{
+  margin-top: 19px !important;
+  /* height: 80px !important; */
+}
+.inter{
+  margin-top: 0px;
+  /* color: #ee6e73; */
+  /* color: red; */
+  /* color: brown; */
+  color: chocolate;
+  /* color: coral; */
+  /* color: crimson; */
+  /* color: orange; */
+  /* color: darkgreen; */
+  /* color: darkorange */
+  /* color: black; */
+}
+.btn{
+  background-color: #ee6e73;
+}
+.cent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+.btn:hover{
+  background-color: brown;
+}
+div.back{
+  margin-top: 10px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="../css/login.css">
+<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main class="centered">
+
+        <div class="container-login mobile-container card center">
+                <% if (errorMessage) { %>
+                    <div class="user-message user-message--error">
+                        <h6><%= errorMessage %></h6>
+                    </div>
+                    
+                <% } %>
+
+                
+
+               
+
+            <div class="row">
+
+                 
+                    <%- include('../includes/_msg.ejs') %>
+            
+                    
+                   
+                <form class="col s12 mobile-login" action="/login" method="post">
+                    <div class="row">
+                        <div>
+                            <h4 class="login">Login</h4>
+                        </div>
+
+                        <div class="input-field col s12 m12 l12">
+                            <input id="email" type="email" value="<%= oldInput.email %>" name="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                            <input id="password" type="password" name="password" value="<%= oldInput.password %>"  class="validate">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="col">
+                            <div class="row submit">
+                                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                <button class="btn col" type="submit">Login</button>
+                                <!-- <span class="col bl ">Not registered ? <a href="/signup" class="login">Sign up </a></span> -->
+                                <span class="col bl ">Don't  have an account ? <a href="/signup" class="login">Signup</a></span>
+                            </div>
+                            
+                           
+
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+
+
+
+
+    </main>
+    <%- include('../includes/footer.ejs') %>
+    <%- include('../includes/end.ejs') %>
